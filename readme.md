@@ -1,103 +1,55 @@
 # rem beauty App - React Native
 
-Una aplicación de comercio electrónico desarrollada con React Native que ofrece una experiencia de compra completa y fácil de usar.
+Navegar y comprar es muy fácil, con una experiencia fluida y sin complicaciones. ¡Todo lo que necesitas para una experiencia de compra perfecta!
 
 ## Funcionalidades Principales
 
 ### Pantalla de Cuenta
 
-- **Acceso seguro:** Solo los usuarios autenticados pueden acceder a la pantalla de perfil y realizar compras.
-- **Información del usuario:** Muestra detalles del usuario, como nombre y dirección.
+- **Acceso seguro:** Los usuarios autenticados pueden acceder a la pantalla de perfil. Para realizar compras y tener un registro de ordenes creadas es necesario loguearse.
+- **Información del usuario:** Muestra detalles del usuario. Se puede subir o sacar una foto y agregarla al perfil. También tiene la funcionalidad de geolocalización que en un futuro mostrará cuál es la tienda más cercana a ti.
 
-<img src="./screenshot/Screenshot_1705910419.png" width="300" >
-<img src="./screenshot/Screenshot_1705910424.png" width="300" >
+<img src="./screenshots/IMG_0779.PNG" width="300" >
+<img src="./screenshots/IMG_0780.PNG" width="300" >
+<img src="./screenshots/IMG_0778.PNG" width="300" >
 
 ### Autenticación con Firebase
 
 - Utiliza el sistema de autenticación de Firebase para gestionar el acceso de usuarios.
 - Permite a los usuarios iniciar sesión y registrarse de manera segura.
 
+<img src="./screenshots/IMG_0781.PNG" width="300" >
+
 ### Pantalla de Categorías
 
 - Muestra una selección de categorías en tarjetas.
 - Al hacer clic en una categoría, se navega a la pantalla de productos correspondiente.
 
+<img src="./screenshots/IMG_0782.PNG" width="300" >
+
 ### Pantalla de Productos
 
-- Lista todos los productos en tarjetas con nombre y foto.
+- Lista todos los productos en tarjetas con nombre, foto y precio.
 - Incluye un buscador para filtrar productos por nombre.
 - Al hacer clic en un producto, se navega a la pantalla de detalles del producto.
+
+<img src="./screenshots/IMG_0776.PNG" width="300" >
 
 ### Pantalla de Detalles del Producto
 
 - Proporciona una descripción detallada del producto.
-- Muestra el precio y el stock disponible.
+- Muestra el precio.
 - Permite agregar el producto al carrito.
 
-<img src="./screenshot/Screenshot_1705910438.png" width="300" >
-<img src="./screenshot/Screenshot_1705910442.png" width="300" >
-<img src="./screenshot/Screenshot_1705910445.png" width="300" >
+<img src="./screenshots/IMG_0775.PNG" width="300" >
 
-### Navegación Inferior
+### Pantalla de Carrito
 
-```javascript
-const TabNavigator = () => {
-  return (
-    <Tab.Navigator
-      screenOptions={{
-        headerShown: false,
-        tabBarShowLabel: false,
-        tabBarStyle: styles.tabBar,
-      }}
-    >
-      <Tab.Screen
-        name="ShopStack"
-        component={ShopStack}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <TabIcon icon="shop" label="Productos" focused={focused} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="CartStack"
-        component={CartStack}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <TabIcon icon="shopping-cart" label="Carrito" focused={focused} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="OrdersStack"
-        component={OrdersStack}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <TabIcon icon="list" label="Ordenes" focused={focused} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="ProfileStack"
-        component={ProfileStack}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <TabIcon icon="user" label="Perfil" focused={focused} />
-          ),
-        }}
-      />
-    </Tab.Navigator>
-  );
-};
-```
+- Muestra los items agregados al carrito
+- Se pueden eliminar items del carrito
+- Se muestra una suma del total
 
-- **Pestaña 1 - Productos:** Categorías y productos (stack principal).
-- **Pestaña 2 - Carrito:** Detalles del carrito de compras con resumen y botón para finalizar la orden.
-- **Pestaña 3 - Órdenes:** Historial de órdenes realizadas.
-- **Pestaña 4 - Perfil:** Información del usuario, ubicación y carga de imagen de perfil.
-
-<img src="./screenshot/Screenshot_1705910459.png" width="300" >
-<img src="./screenshot/Screenshot_1705910463.png" width="300" >
+<img src="./screenshots/IMG_0777.PNG" width="300" >
 
 ## Tecnologías Utilizadas
 
@@ -111,7 +63,7 @@ const TabNavigator = () => {
 
 ## Instalación
 
-1. Clona el repositorio: `git clone https://github.com/tu-usuario/tu-aplicacion.git`
+1. Clona el repositorio: `git clone https://github.com/lucilaparodi/rem.git`
 2. Instala las dependencias: `npm install`
 3. Configura las claves de API para servicios externos (Expo-Location, Firebase, etc.).
 4. Configura las credenciales de Firebase en tu proyecto.
